@@ -28,6 +28,9 @@ compdef _git gdc=git-diff
 # Git diff in a vim editor
 gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
+# Git diff colored line count visualization
+gds() { git diff --stat --color "$@" | cat }
+compdef _git gds=git-diff
 
 ###############
 # Git Pull (gp)
